@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/baseline_calculate_black_48dp"
+        android:icon="@mipmap/ic_launcher_calculator_foreground"
         android:label="제어계산기"
-        android:roundIcon="@drawable/baseline_calculate_black_48dp"
+        android:roundIcon="@mipmap/ic_launcher_calculator_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -21,6 +21,9 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".Calculator1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Calculator2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

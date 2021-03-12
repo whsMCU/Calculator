@@ -1,28 +1,28 @@
 package com.wang.calculator;
 
 public class ListData {
-    private int poster;
-    private String movieName;
-    private String grade;
+    private int picture;
+    private String calculator_Name;
+    private String calculator_Description;
 
-    public ListData(int poster, String movieName, String grade){
-        this.poster = poster;
-        this.movieName = movieName;
-        this.grade = grade;
+    public ListData(int picture, String calculator_Name, String calculator_Description){
+        this.picture = picture;
+        this.calculator_Name = calculator_Name;
+        this.calculator_Description = calculator_Description;
     }
 
-    public int getPoster()
+    public int getPicture()
     {
-        return this.poster;
+        return this.picture;
     }
 
-    public String getMovieName()
+    public String getCalculator_Name()
     {
-        return this.movieName;
+        return this.calculator_Name;
     }
 
-    public String getGrade()
+    public String getCalculator_Description()
     {
-        return this.grade;
+        return this.calculator_Description;
     }
 }

@@ -36,49 +36,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textexplan2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Zero, Span, Value입력하면, mA로 출력합니다."
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/editZero2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Input : LRV"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editSpan2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Input : URV"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editValue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Input : Value"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/btn_calc_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="계산하기" />
-
-        <TextView
-            android:id="@+id/text_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="30dp"/>
-
         <Button
             android:id="@+id/btn_back1"
             android:layout_width="match_parent"

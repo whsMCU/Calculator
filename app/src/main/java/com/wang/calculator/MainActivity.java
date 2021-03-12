@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<ListData> movieDataList;
+    ArrayList<ListData> calculatorDataList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,48 +24,35 @@ public class MainActivity extends AppCompatActivity {
         this.InitializeMovieData();
 
         ListView listView = (ListView)findViewById(R.id.listView);
-        final MyAdapter myAdapter = new MyAdapter(this, movieDataList);
+        final MyAdapter myAdapter = new MyAdapter(this, calculatorDataList);
 
         listView.setAdapter(myAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(),
-                        myAdapter.getItem(i).getMovieName(),
-                        Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), myAdapter.getItem(i).getCalculator_Name(), Toast.LENGTH_LONG).show();
+
+                if(myAdapter.getItem(i).getCalculator_Name() == "0~100% 보기"){
+                    Intent intent = new Intent(MainActivity.this, Calculator.class);
+                    startActivity(intent);
+                }else if(myAdapter.getItem(i).getCalculator_Name() == "mA to percent 계산"){
+                    Intent intent = new Intent(MainActivity.this, Calculator1.class);
+                    startActivity(intent);
+                }else if(myAdapter.getItem(i).getCalculator_Name() == "mA로 계산"){
+                    Intent intent = new Intent(MainActivity.this, Calculator2.class);
+                    startActivity(intent);
+                }
             }
         });
-
-        Button btn_target = findViewById(R.id.btn_target);
-        Button btn_calc =findViewById(R.id.btn_calc);
-
-        btn_target.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Calculator.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_calc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Calculator1.class);
-                startActivity(intent);
-            }
-        });
-
-
-
     }
 
     public void InitializeMovieData()
     {
-        movieDataList = new ArrayList<ListData>();
+        calculatorDataList = new ArrayList<ListData>();
 
-        movieDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "미션임파서블","15세 이상관람가"));
-        movieDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "아저씨","19세 이상관람가"));
-        movieDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "어벤져스","12세 이상관람가"));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "0~100% 보기","LRV와 URV를 입력하면 25% 단위로 출력"));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA to percent 계산","mA를 입력하면 %로 출력"));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA로 계산","Zero, Span, Value를 입력하면 mA로 출력"));
     }
 
 

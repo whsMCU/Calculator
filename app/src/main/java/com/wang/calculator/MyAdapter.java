@@ -14,17 +14,17 @@ public class MyAdapter extends BaseAdapter {
 
     Context mContext = null;
     LayoutInflater mLayoutInflater = null;
-    ArrayList<ListData> sample;
+    ArrayList<ListData> calculator;
 
     public MyAdapter(Context context, ArrayList<ListData> data) {
         mContext = context;
-        sample = data;
+        calculator = data;
         mLayoutInflater = LayoutInflater.from(mContext);
     }
 
     @Override
     public int getCount() {
-        return sample.size();
+        return calculator.size();
     }
 
     @Override
@@ -34,20 +34,20 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public ListData getItem(int position) {
-        return sample.get(position);
+        return calculator.get(position);
     }
 
     @Override
     public View getView(int position, View converView, ViewGroup parent) {
         View view = mLayoutInflater.inflate(R.layout.activity_listview, null);
 
-        ImageView imageView = (ImageView)view.findViewById(R.id.poster);
-        TextView movieName = (TextView)view.findViewById(R.id.movieName);
-        TextView grade = (TextView)view.findViewById(R.id.grade);
+        ImageView imageView = (ImageView)view.findViewById(R.id.picture);
+        TextView movieName = (TextView)view.findViewById(R.id.calculator_Name);
+        TextView grade = (TextView)view.findViewById(R.id.calculator_Description);
 
-        imageView.setImageResource(sample.get(position).getPoster());
-        movieName.setText(sample.get(position).getMovieName());
-        grade.setText(sample.get(position).getGrade());
+        imageView.setImageResource(calculator.get(position).getPicture());
+        movieName.setText(calculator.get(position).getCalculator_Name());
+        grade.setText(calculator.get(position).getCalculator_Description());
 
         return view;
     }
