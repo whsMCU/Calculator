@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : LRV"
-            android:inputType="textPersonName" />
+            android:inputType="numberSigned" />
 
         <EditText
             android:id="@+id/editSpan2"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : URV"
-            android:inputType="textPersonName" />
+            android:inputType="numberSigned" />
 
         <EditText
             android:id="@+id/editValue"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : Value"
-            android:inputType="textPersonName" />
+            android:inputType="numberSigned" />
 
         <Button
             android:id="@+id/btn_calc_result"

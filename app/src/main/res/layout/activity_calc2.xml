@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : mA"
-            android:inputType="textPersonName" />
+            android:inputType="numberSigned" />
 
         <Button
             android:id="@+id/btn_calc2"
