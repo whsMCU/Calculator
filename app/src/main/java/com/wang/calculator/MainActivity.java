@@ -51,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getApplicationContext(), myAdapter.getItem(i).getCalculator_Name(), Toast.LENGTH_LONG).show();
 
-                if(myAdapter.getItem(i).getCalculator_Name() == "0~100% 보기"){
+                if(myAdapter.getItem(i).getCalculator_Activity() == Calculator.class){
                     Intent intent = new Intent(MainActivity.this, Calculator.class);
                     startActivity(intent);
-                }else if(myAdapter.getItem(i).getCalculator_Name() == "mA to percent 계산"){
+                }else if(myAdapter.getItem(i).getCalculator_Activity() == Calculator1.class){
                     Intent intent = new Intent(MainActivity.this, Calculator1.class);
                     startActivity(intent);
-                }else if(myAdapter.getItem(i).getCalculator_Name() == "mA로 계산"){
+                }else if(myAdapter.getItem(i).getCalculator_Activity() == Calculator2.class){
                     Intent intent = new Intent(MainActivity.this, Calculator2.class);
                     startActivity(intent);
                 }
@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity {
     {
         calculatorDataList = new ArrayList<ListData>();
 
-        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "0~100% 보기","LRV와 URV를 입력하면 25% 단위로 출력"));
-        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA to percent 계산","mA를 입력하면 %로 출력"));
-        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA로 계산","Zero, Span, Value를 입력하면 mA로 출력"));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "0~100% 보기","LRV와 URV를 입력하면 25% 단위로 출력", Calculator.class));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA to percent 계산","mA를 입력하면 %로 출력", Calculator1.class));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA로 계산","Zero, Span, Value를 입력하면 mA로 출력", Calculator2.class));
     }
 
 
