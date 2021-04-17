@@ -15,7 +15,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9708062265777742~9088121023"/>
+            android:value="ca-app-pub-9708062265777742~9088121023" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -26,13 +26,16 @@
         </activity>
         <activity
             android:name=".Calculator"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Calculator1"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Calculator2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CheckSheet"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
