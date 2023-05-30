@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : LRV"
-            android:inputType="numberSigned" />
+            android:inputType="numberSigned|number|numberDecimal"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/editSpan2"
@@ -31,7 +32,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : URV"
-            android:inputType="numberSigned" />
+            android:inputType="numberSigned|number|numberDecimal"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/editValue"
@@ -39,7 +41,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Input : Value"
-            android:inputType="numberSigned" />
+            android:inputType="numberSigned|number|numberDecimal"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btn_calc_result"
