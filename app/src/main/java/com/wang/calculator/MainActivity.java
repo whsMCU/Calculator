@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (myAdapter.getItem(i).getCalculator_Activity() == Calculator2.class) {
                     Intent intent = new Intent(MainActivity.this, Calculator2.class);
                     startActivity(intent);
+                } else if (myAdapter.getItem(i).getCalculator_Activity() == Calculator3.class) {
+                    Intent intent = new Intent(MainActivity.this, Calculator3.class);
+                    startActivity(intent);
                 }else if (myAdapter.getItem(i).getCalculator_Activity() == CheckSheet.class) {
                     Intent intent = new Intent(MainActivity.this, CheckSheet.class);
                     startActivity(intent);
@@ -176,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
         calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "0~100% 보기", "LRV와 URV를 입력하면 25% 단위로 출력", Calculator.class));
         calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA to percent 계산", "mA를 입력하면 %로 출력", Calculator1.class));
         calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "mA로 계산", "Zero, Span, Value를 입력하면 mA로 출력", Calculator2.class));
+        calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "Value로 계산", "Zero, Span, mA 입력하면 Value로 출력", Calculator3.class));
         calculatorDataList.add(new ListData(R.drawable.baseline_calculate_black_48dp, "점검시트", "점검시트", CheckSheet.class));
     }
 

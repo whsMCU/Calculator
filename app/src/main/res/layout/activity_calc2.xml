@@ -11,36 +11,53 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textexplan"
+            android:id="@+id/textexplan2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="mA입력하면 %로 출력합니다."
+            android:text="Zero, Span, Value입력하면, mA로 출력합니다."
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/edit_mA"
+            android:id="@+id/editZero2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Input : mA"
+            android:hint="Input : LRV"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/editSpan2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input : URV"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/editValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input : Value"
             android:inputType="numberSigned|number|numberDecimal"
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/btn_calc2"
+            android:id="@+id/btn_calc_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="계산하기" />
 
         <TextView
-            android:id="@+id/text_result_Percent"
+            android:id="@+id/text_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30dp" />
-
+            android:textSize="30dp"/>
 
         <Button
-            android:id="@+id/btn_back1"
+            android:id="@+id/btn_back2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="되돌아가기" />

@@ -14,7 +14,7 @@
             android:id="@+id/textexplan2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Zero, Span, Value입력하면, mA로 출력합니다."
+            android:text="Zero, Span, mA입력하면, Value로 출력합니다."
             android:textSize="24sp" />
 
         <EditText
@@ -36,11 +36,11 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/editValue"
+            android:id="@+id/editmA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Input : Value"
+            android:hint="Input : mA"
             android:inputType="numberSigned|number|numberDecimal"
             android:minHeight="48dp" />
 

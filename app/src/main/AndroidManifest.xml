@@ -34,6 +34,9 @@
             android:name=".Calculator2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".Calculator3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".CheckSheet"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>

@@ -10,40 +10,66 @@
         android:layout_weight="9"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textexplan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="mA입력하면 %로 출력합니다."
-            android:textSize="24sp" />
-
         <EditText
-            android:id="@+id/edit_mA"
+            android:id="@+id/editZero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Input : mA"
+            android:hint="Input : LRV"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/editSpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Input : URV"
             android:inputType="numberSigned|number|numberDecimal"
             android:minHeight="48dp" />
 
         <Button
-            android:id="@+id/btn_calc2"
+            android:id="@+id/btn_calc1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="계산하기" />
 
         <TextView
-            android:id="@+id/text_result_Percent"
+            android:id="@+id/text_result0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="30dp" />
 
+        <TextView
+            android:id="@+id/text_result1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_result2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_result3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_result4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp" />
 
         <Button
-            android:id="@+id/btn_back1"
+            android:id="@+id/btn_back"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="되돌아가기" />
+
     </LinearLayout>
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -55,5 +81,4 @@
         android:layout_weight="1"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-9708062265777742/3516627851"></com.google.android.gms.ads.AdView>
-
 </LinearLayout>

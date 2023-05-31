@@ -14,14 +14,14 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-public class Calculator2 extends AppCompatActivity {
+public class Calculator3 extends AppCompatActivity {
 
     private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calc2);
+        setContentView(R.layout.activity_calc3);
 
         MobileAds.initialize(getApplicationContext(), new OnInitializationCompleteListener() {
             @Override
@@ -35,7 +35,7 @@ public class Calculator2 extends AppCompatActivity {
 
         final EditText Input_zero = findViewById(R.id.editZero2);
         final EditText Input_span = findViewById(R.id.editSpan2);
-        final EditText Input_Value = findViewById(R.id.editValue);
+        final EditText Input_mA = findViewById(R.id.editmA);
         Button Cal_result = findViewById(R.id.btn_calc_result);
         final TextView Output_result = findViewById(R.id.text_result);
 
@@ -47,13 +47,19 @@ public class Calculator2 extends AppCompatActivity {
             public void onClick(View v) {
                 float zero2 = Float.parseFloat(Input_zero.getText().toString());
                 float span2 = Float.parseFloat(Input_span.getText().toString());
-                float pressure = Float.parseFloat(Input_Value.getText().toString());
+                float mA = Float.parseFloat(Input_mA.getText().toString());
                 //Toast.makeText(Calculator1.this, zero2 +"  "+ span2 +"  " + pressure, Toast.LENGTH_LONG).show();
-                //y=mx+b
-                float m = 16/(span2 - zero2);
-                float y = (m * pressure) + 4;
+                float m, y;
 
-                Output_result.setText(Float.toString(y) + " mA");
+                if(zero2 < 0){
+                    m = (span2 - zero2)/16;
+                    y = (m * (mA - 4)) - zero2;
+                }else{
+                    m = (span2 - zero2)/16;
+                    y = m * (mA - 4);
+                }
+
+                Output_result.setText(Float.toString(y) + " Value");
             }
         });
 

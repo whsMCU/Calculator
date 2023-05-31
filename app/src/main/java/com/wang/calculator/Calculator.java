@@ -21,7 +21,7 @@ public class Calculator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calc1);
+        setContentView(R.layout.activity_calc);
 
         MobileAds.initialize(getApplicationContext(), new OnInitializationCompleteListener() {
             @Override
